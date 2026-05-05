@@ -8,14 +8,8 @@
 # META   },
 # META   "dependencies": {
 # META     "lakehouse": {
-# META       "default_lakehouse": "549008b0-e0f5-4e5d-a2da-6357bbbf3694",
-# META       "default_lakehouse_name": "lh_Bronze",
-# META       "default_lakehouse_workspace_id": "f6ae9386-89e1-4cf6-84d9-3900cd4b69fa",
-# META       "known_lakehouses": [
-# META         {
-# META           "id": "549008b0-e0f5-4e5d-a2da-6357bbbf3694"
-# META         }
-# META       ]
+# META       "default_lakehouse_name": "",
+# META       "default_lakehouse_workspace_id": ""
 # META     }
 # META   }
 # META }
@@ -45,21 +39,39 @@ workspace_name = fabric.resolve_workspace_name()
 
 # META {
 # META   "language": "python",
-# META   "language_group": "synapse_pyspark"
+# META   "language_group": "synapse_pyspark",
+# META   "frozen": false,
+# META   "editable": true
+# META }
+
+# CELL ********************
+
+# obtenção do workspace id e do workspace name alternativo
+
+workspace_id = spark.conf.get("trident.workspace.id")
+workspace_name = spark.conf.get("trident.workspace.name")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark",
+# META   "frozen": true,
+# META   "editable": false
 # META }
 
 # PARAMETERS CELL ********************
 
 # Parâmetros passados pelo pipeline ( obtidos a partir do orquestrador)
 
-workspace_name= "ws_fabric"
-source_storage= "lh_bronze"
-source_folder="Staging"
-source_file="Customer.parquet"
+      
+source_storage= ""
+source_folder=""
+source_file=""
 
-target_storage= "lh_bronze"
-target_table= "customer"
-target_mode= "overwrite"
+target_storage= ""
+target_table= ""
+target_mode= ""
 
 
 # METADATA ********************
