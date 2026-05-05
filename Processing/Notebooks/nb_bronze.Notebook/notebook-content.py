@@ -44,22 +44,6 @@ workspace_name = fabric.resolve_workspace_name()
 # META   "editable": true
 # META }
 
-# CELL ********************
-
-# obtenção do workspace id e do workspace name alternativo
-
-workspace_id = spark.conf.get("trident.workspace.id")
-workspace_name = spark.conf.get("trident.workspace.name")
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark",
-# META   "frozen": true,
-# META   "editable": false
-# META }
-
 # PARAMETERS CELL ********************
 
 # Parâmetros passados pelo pipeline ( obtidos a partir do orquestrador)
