@@ -1,0 +1,89 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "InvokePipeline",
+        "typeProperties": {
+          "parameters": {},
+          "waitOnCompletion": true,
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "pipelineId": "8d807f28-99b7-9029-411e-c7583b594532",
+          "operationType": "InvokeFabricPipeline"
+        },
+        "externalReferences": {
+          "connection": "4a0cffba-2636-4f22-9af2-4db979cfdab2"
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Pipeline Staging",
+        "description": "Executa o pipeline de Staging (Tabelas SQL Server salvas com arquivos Parquet)",
+        "dependsOn": []
+      },
+      {
+        "type": "InvokePipeline",
+        "typeProperties": {
+          "parameters": {},
+          "waitOnCompletion": true,
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "pipelineId": "1572dcd5-70c0-a058-4c36-b73396b5079d",
+          "operationType": "InvokeFabricPipeline"
+        },
+        "externalReferences": {
+          "connection": "4a0cffba-2636-4f22-9af2-4db979cfdab2"
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Pipeline Bronze",
+        "description": "Executa o pipeline da camada Bronze(Arquivo Parquet salvos como tabelas Delta)",
+        "dependsOn": [
+          {
+            "activity": "Pipeline Staging",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "InvokePipeline",
+        "typeProperties": {
+          "parameters": {},
+          "waitOnCompletion": true,
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "pipelineId": "76f5eb49-80d9-85c7-400b-e608f795d0c5",
+          "operationType": "InvokeFabricPipeline"
+        },
+        "externalReferences": {
+          "connection": "4a0cffba-2636-4f22-9af2-4db979cfdab2"
+        },
+        "policy": {
+          "timeout": "0.00:10:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Pipeline silver",
+        "description": "Executa o pipeline da camada Silver(Transformações na tabelas da bronze para criação de novas tabelas na camada silver)",
+        "dependsOn": [
+          {
+            "activity": "Pipeline Bronze",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
