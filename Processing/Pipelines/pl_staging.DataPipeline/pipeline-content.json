@@ -80,7 +80,7 @@
                     },
                     "schema": [],
                     "externalReferences": {
-                      "connection": "c0ad4a20-c5c3-4698-8a38-20cedd58dd59"
+                      "connection": "@pipeline().libraryVariables.vl_solucoes_fabric_cnn_sqlserver_adworks_dev"
                     },
                     "annotations": []
                   }
@@ -116,8 +116,8 @@
                       "properties": {
                         "type": "Lakehouse",
                         "typeProperties": {
-                          "artifactId": "1fe0cfe4-e6fd-4195-9c16-a33c7f704281",
-                          "workspaceId": "80ba11b0-40e5-4362-8d6c-8717bec8a647",
+                          "artifactId": "883a02f7-ff21-9820-49eb-271098365e8e",
+                          "workspaceId": "00000000-0000-0000-0000-000000000000",
                           "rootFolder": "Files"
                         },
                         "annotations": []
@@ -160,6 +160,13 @@
           }
         ]
       }
-    ]
+    ],
+    "libraryVariables": {
+      "vl_solucoes_fabric_cnn_sqlserver_adworks_dev": {
+        "type": "String",
+        "variableName": "cnn_sqlserver_adworks_dev",
+        "libraryName": "vl_solucoes_fabric"
+      }
+    }
   }
 }
