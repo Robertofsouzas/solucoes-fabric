@@ -6,8 +6,9 @@
       "type": "OneLake",
       "oneLake": {
         "path": "Tables/dbo/Sales",
-        "itemId": "2d51ca98-296d-4768-a2db-dac98e7a38ee",
-        "workspaceId": "8d2be10a-d856-475a-a75b-a482c808d9c0"
+        "itemId": "8e7a38ee-dac9-a2db-4768-296d2d51ca98",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Lakehouse"
       }
     }
   },
@@ -18,8 +19,9 @@
       "type": "OneLake",
       "oneLake": {
         "path": "Tables/dbo/Products",
-        "itemId": "2d51ca98-296d-4768-a2db-dac98e7a38ee",
-        "workspaceId": "8d2be10a-d856-475a-a75b-a482c808d9c0"
+        "itemId": "8e7a38ee-dac9-a2db-4768-296d2d51ca98",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Lakehouse"
       }
     }
   },
@@ -30,8 +32,9 @@
       "type": "OneLake",
       "oneLake": {
         "path": "Tables/dbo/Customers",
-        "itemId": "2d51ca98-296d-4768-a2db-dac98e7a38ee",
-        "workspaceId": "8d2be10a-d856-475a-a75b-a482c808d9c0"
+        "itemId": "8e7a38ee-dac9-a2db-4768-296d2d51ca98",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "artifactType": "Lakehouse"
       }
     }
   }
