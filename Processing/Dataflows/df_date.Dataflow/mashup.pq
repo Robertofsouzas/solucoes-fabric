@@ -19,8 +19,8 @@ shared StartDate = #date(2008, 1, 1) meta [IsParameterQuery = true, IsParameterQ
 shared EndDate = #date(2008, 12, 31) meta [IsParameterQuery = true, IsParameterQueryRequired = false, Type = type date, DefaultValue = null];
 shared Date_DataDestination = let
   Pattern = Lakehouse.Contents([CreateNavigationProperties = false, EnableFolding = false, HierarchicalNavigation = null, EnableVorder = true, OutputMetadataRefresh = true]),
-  Navigation_1 = Pattern{[workspaceId = "e32e58cc-a2bd-4639-8563-50a4a2bb4530"]}[Data],
-  Navigation_2 = Navigation_1{[lakehouseId = "f5b5043f-7133-47d3-a455-5b1eabee8a4a"]}[Data],
+  Navigation_1 = Pattern{[workspaceId = "8d2be10a-d856-475a-a75b-a482c808d9c0"]}[Data],
+  Navigation_2 = Navigation_1{[lakehouseId = "e6db21e6-2469-49d9-8948-f719427a7090"]}[Data],
   TableNavigation = Navigation_2{[Id = "DimDate", ItemKind = "Table"]}?[Data]?
 in
   TableNavigation;
