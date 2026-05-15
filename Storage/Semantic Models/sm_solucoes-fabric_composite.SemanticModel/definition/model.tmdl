@@ -6,11 +6,11 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
+annotation PBI_ProTooling = ["TMDLView_Desktop", "RemoteModeling", "SLL", "WebModelingEdit", "DirectLakeOnOneLakeInWeb", "SLL_UpdateDLConnection_DLOL"]
+
 annotation PBI_QueryOrder = ["DirectLake - lh_gold","DimDate","server","Database"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
-
-annotation PBI_ProTooling = ["DirectLakeOnOneLakeInWeb","WebModelingEdit","TMDLView_Desktop","RemoteModeling"]
 
 ref table FactSales
 ref table DimCustomers

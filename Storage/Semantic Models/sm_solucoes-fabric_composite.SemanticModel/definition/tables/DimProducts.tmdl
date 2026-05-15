@@ -165,5 +165,5 @@ table DimProducts
 		source
 			entityName: DimProducts
 			schemaName: dbo
-			expressionSource: 'DirectLake - lh_gold'
+			expressionSource: DatabaseQuery1
 

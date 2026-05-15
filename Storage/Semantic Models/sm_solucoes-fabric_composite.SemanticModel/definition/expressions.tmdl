@@ -19,3 +19,10 @@ expression Database = "lh_gold" meta [IsParameterQuery = true, IsParameterQueryR
 
 	annotation PBI_ResultType = Text
 
+expression DatabaseQuery1 =
+		let
+			Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/8d2be10a-d856-475a-a75b-a482c808d9c0/e6db21e6-2469-49d9-8948-f719427a7090")
+		in
+			Source
+	lineageTag: 49a80b62-e219-46b5-8ab4-974436deb3a8
+

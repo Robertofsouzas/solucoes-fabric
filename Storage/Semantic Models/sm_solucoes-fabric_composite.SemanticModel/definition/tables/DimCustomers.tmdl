@@ -136,5 +136,5 @@ table DimCustomers
 		source
 			entityName: DimCustomers
 			schemaName: dbo
-			expressionSource: 'DirectLake - lh_gold'
+			expressionSource: DatabaseQuery1
 

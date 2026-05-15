@@ -10,7 +10,7 @@ annotation PBI_QueryOrder = ["DirectLake - lh_gold"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_ProTooling = ["DirectLakeOnOneLakeInWeb","WebModelingEdit","TMDLView_Desktop","RemoteModeling"]
+annotation PBI_ProTooling = ["TMDLView_Desktop", "RemoteModeling", "SLL", "WebModelingEdit", "DirectLakeOnOneLakeInWeb", "SLL_UpdateDLConnection_DLOL"]
 
 ref table DimDate
 ref table FactSales
