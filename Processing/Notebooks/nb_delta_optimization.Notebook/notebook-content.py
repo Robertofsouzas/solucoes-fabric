@@ -6,20 +6,12 @@
 # META   "kernel_info": {
 # META     "name": "synapse_pyspark"
 # META   },
-# META   "dependencies": {}
-# META }
-
-# CELL ********************
-
-# instalação do semantic Labs
-%pip install semantic-link-labs
-
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
+# META   "dependencies": {
+# META     "environment": {
+# META       "environmentId": "cb602006-de0a-b904-437b-8bb8c37164df",
+# META       "workspaceId": "00000000-0000-0000-0000-000000000000"
+# META     }
+# META   }
 # META }
 
 # CELL ********************
@@ -54,7 +46,7 @@ workspace = fabric.resolve_workspace_name()
 # Parametros
 
 lakehouse = "lh_silver"
-table  = "Sales"
+table  = "dbo/Sales"
 
 # METADATA ********************
 
