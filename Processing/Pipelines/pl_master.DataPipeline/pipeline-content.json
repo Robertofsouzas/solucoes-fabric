@@ -83,6 +83,36 @@
             ]
           }
         ]
+      },
+      {
+        "type": "InvokePipeline",
+        "typeProperties": {
+          "parameters": {},
+          "waitOnCompletion": true,
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "pipelineId": "03d7e3d0-92eb-9580-454d-1c2e051fb5c4",
+          "operationType": "InvokeFabricPipeline"
+        },
+        "externalReferences": {
+          "connection": "4a0cffba-2636-4f22-9af2-4db979cfdab2"
+        },
+        "policy": {
+          "timeout": "0.00:30:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Pipeline Gold",
+        "description": "Executa o pipeline da camada Gold\n(Otimização de tabelas Delta e Atualização de modelos semânticos)",
+        "dependsOn": [
+          {
+            "activity": "Pipeline silver",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
       }
     ]
   }
