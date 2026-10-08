@@ -299,3 +299,22 @@ Para dúvidas sobre implementação:
 **Linguagem:** Python 3.x + PySpark  
 **Plataforma:** Microsoft Fabric  
 **Última atualização:** 2026-05-26
+
+<!-- rfstechs-cta -->
+<br>
+
+---
+
+<div align="center">
+
+### Quer algo assim na sua empresa?
+
+Transformo planilhas e processos manuais em **dashboards, automações e agentes de IA** para pequenas e médias empresas.
+
+<a href="https://rfstech.vercel.app/gh/solucoes-fabric">
+  <img src="https://img.shields.io/badge/Fale%20comigo-RFStechs-4F46E5?style=for-the-badge" alt="Fale comigo — RFStechs" />
+</a>
+
+<sub>Roberto Souza · RFStechs · BI, dados e agentes de IA para PMEs</sub>
+
+</div>
